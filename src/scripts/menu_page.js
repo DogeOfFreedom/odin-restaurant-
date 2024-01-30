@@ -11,6 +11,12 @@ let createMenuPage = () => {
     const content = document.querySelector("#content");
     content.innerHTML = "";
     
+    const menu_header = document.createElement("h1");
+    menu_header.textContent = "Our Menu";
+    menu_header.classList.add("important-title");
+    menu_header.classList.add("page-title");
+    content.appendChild(menu_header);
+
     const menu_items = document.createElement("div");
     menu_items.className = "menu-items-container";
     content.appendChild(menu_items);
@@ -24,7 +30,7 @@ let createMenuPage = () => {
     for(let i = 0; i < item_names.length; i++) {
         let img = item_imgs[i];
         let name = item_names[i];
-        let price = item_prices[i];
+        let price = `\$${item_prices[i]}`;
 
         const menu_item = document.createElement("div");
         menu_item.className = "menu-card";
@@ -32,10 +38,8 @@ let createMenuPage = () => {
         menu_item_img.className = "menu-item-img";
         menu_item_img.src = img;
         const menu_item_name = document.createElement("h3");
-        menu_item_name.className = "menu-item-name";
         menu_item_name.textContent = name;
         const menu_item_price = document.createElement("p");
-        menu_item_price.className = "menu-item-price"
         menu_item_price.textContent = price;
         menu_item.appendChild(menu_item_img);
         menu_item.appendChild(menu_item_name);

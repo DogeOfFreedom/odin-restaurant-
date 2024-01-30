@@ -10,7 +10,7 @@ let createHomePage = () => {
             </video>
         </div>
         <div class="hero-text-container">
-            <h1 class="restaurant-name">Sofia's Alley</h1>
+            <h1 class="important-title page-title">Sofia's Alley</h1>
             <h3 class="title-sub-text">Italian Cuisine at its finest</h3>
             <div class="video-bg-btn-container">
                 <button class="menu_btn video-bg-btn">Menu</button>
@@ -69,21 +69,21 @@ let createHomePage = () => {
                 <div class="contact-container">
                     <h2>Contact Us</h2>
                     <table>
-                        <tr>
-                            <td>
-                                <img src="images/logos/instagram.png" class="small-icon" alt="">
-                            </td>
-                            <td>@sophias_alley_restaurant</td>
-                        </tr>
-                        <tr>
-                            <td>Phone:</td>
-                            <td>561-973-111</td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
-                            <td>Sophias_Alley@funkmail.com</td>
-                        </tr>
-                    </table>
+                    <tr>
+                        <td>
+                            <img src="images/logos/instagram.png" class="small-icon" alt="">
+                        </td>
+                        <td>@sophias_alley_restaurant</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>561-973-111</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>Sophias_Alley@funkmail.com</td>
+                    </tr>
+                </table>
                 </div>
                 <div class="address-container">
                     <h2>Address</h2>

@@ -9,6 +9,11 @@
     --header-height: 60px;
     --small-header: 30px;
     --text: 25px;
+
+    --card-board-radius: 25px;
+    --card-text: 24px;
+    --card-width: 400px;
+    --content-padding: 25px clamp(20px, 10vw, 500px);
 }
 
 @font-face {
@@ -88,10 +93,16 @@ button:hover {
     }
 }
 
-.restaurant-name {
+.important-title {
     font-family: lumina;
     font-style: italic;
     letter-spacing: 3px;
+}
+
+.page-title {
+    font-size: 120px;
+    color: white;
+    text-align: center;
 }
 
 .title-sub-text {
@@ -120,7 +131,6 @@ button:hover {
     
     
     & h1 {
-        font-size: 120px;
         margin-bottom: 0px;
     }
 
@@ -134,7 +144,7 @@ button:hover {
     background-color: var(--bg-colour);
     margin-top: 250px;
     margin-bottom: 100px;
-    padding: 25px clamp(20px, 10vw, 500px);
+    padding: var(--content-padding);
     color: white;
 }
 
@@ -282,4 +292,33 @@ table {
 .small-icon {
     width: auto;
     height: 50px;
+}
+
+.menu-items-container {
+    padding: var(--content-padding);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, var(--card-width));
+    gap: 25px;
+}
+
+.menu-card {
+    background-color: white;
+    width: var(--card-width);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: var(--card-board-radius);
+    box-shadow: 2px 2px 5px rgb(15, 15, 15);
+    font-size: var(--card-text);
+
+    & * {
+        text-align: center;
+    }
+}
+
+.menu-item-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--card-board-radius);
 }
