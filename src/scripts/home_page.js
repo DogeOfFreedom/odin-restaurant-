@@ -1,8 +1,15 @@
-let createMainPage = () => {
+import bgVideo from "../videos/Italian Food Stock Footage.mp4"
+
+let createHomePage = () => {
     const content = document.querySelector("#content");
     const contentHTML = `
-    <h1>Sofia's Alley</h1>
-        <h3><i>Italian Cuisine at its finest</i></h3>
+        <video autoplay muted loop id="bg-video">
+            <source src="${bgVideo}" type="video/mp4">
+        </video>
+        <div class="hero-text-container">
+            <h1>Sofia's Alley</h1>
+            <h3><i>Italian Cuisine at its finest</i></h3>
+        </div>
         <p>
             Sofia's Alley has been serving up the finest Italian cuisine since 1952. The name "Sofia's Alley" pays homage to
             the owner Sofia's original street side restaraunt she operated in Italy. "Sophia Sophia, when are you opening your door?
@@ -30,8 +37,8 @@ let createMainPage = () => {
         <div class="address-container">
             <h2>Address</h2>
             <p>Sophia Alley’s Thymes Crescent
-               179 North 24th Rd
-               New Old Town, ALBQ 20095</p>
+            179 North 24th Rd
+            New Old Town, ALBQ 20095</p>
         </div>
         <div class="reservation-container">
             <h2>Make a Reservation</h2>
@@ -49,4 +56,4 @@ let createMainPage = () => {
     content.innerHTML = contentHTML;
 }
 
-export { createMainPage }
+export { createHomePage }

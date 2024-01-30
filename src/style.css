@@ -1,3 +1,11 @@
+:root {
+    --dark-red: #540b0e,
+    --red: #9e2a2b,
+    --orange: #e09f3e,
+    --light-yellow: #e09f3e,
+    --green-blue: #335c67
+}
+
 body {
-    color: red;
+    margin: 0px;
 }
