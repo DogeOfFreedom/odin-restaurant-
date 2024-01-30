@@ -7,7 +7,8 @@
     --bg-colour: rgb(22, 22, 22);
     --inner-bg-colour: rgb(46, 46, 46);
     --header-height: 60px;
-    --small-heading: 30px;
+    --small-header: 30px;
+    --text: 25px;
 }
 
 @font-face {
@@ -133,24 +134,25 @@ button:hover {
     background-color: var(--bg-colour);
     margin-top: 250px;
     margin-bottom: 100px;
-    padding: 25px 20vw;
+    padding: 25px clamp(20px, 10vw, 500px);
     color: white;
 }
 
-.about-us-container {
-    --text-height: 30px;
+.text-container {
+    --small-header: 30px;
 
     text-align: center;
-    font-size: var(--text-height);
+    font-size: var(--small-header);
     border: 2px solid white;
     padding: 50px 40px;
-    line-height: calc(var(--text-height) + 10px);
+    line-height: calc(var(--small-header) + 10px);
     margin: 70px 0px 100px 0px;
+    color: white;
 }
 
 .home-page-content-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3fr 1fr;
     column-gap: 30px;
     row-gap: 30px;
@@ -158,17 +160,15 @@ button:hover {
 
 .hours-container,
 .address-container,
-.reservation-container {
+.reservation-container,
+.contact-container {
     background-color: var(--inner-bg-colour);
-}
-
-.hours-container,
-.address-container {
-    font-size: 25px;
-    padding: 30px 0px 30px 20px;   
+    font-size: var(--text);
+    padding: 30px;
+    text-align: center;
 
     & h2 {
-        font-size: var(--small-heading);
+        font-size: var(--small-header);
     }
 }
 
@@ -177,25 +177,22 @@ button:hover {
     grid-row: 1/2; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-
-    & h2 {
-        margin: 0px;
-    }
+    align-items: center;
 }
 
 table {
-    list-style-type: none;
     flex: auto;
     padding-bottom: 10px;
+    border-spacing: 30px;
+    display: flex;
 
-    & td {
-        padding-right: 30px;
+    & tr {
+        flex: auto;
     }
 }
 
 .address-container {
-    grid-column: 2/3;
+    grid-column: 2/4;
     grid-row: 2/3;
 }
 
@@ -212,13 +209,12 @@ table {
     & h2 {
         margin-top: 0px;
         margin-bottom: 10px;
-        font-size: var(--small-heading);
+        text-align: center;
     }
 
     & p {
         margin-top: 10px;
         text-align: center;
-        font-size: 22px;
     }
 }
 
@@ -259,4 +255,31 @@ table {
             background-color: var(--red);
         }
     }
+}
+
+.contact-container {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--text);
+}
+
+.contact-content {
+    flex: auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    gap: 50px;
+}
+
+.small-icon {
+    width: auto;
+    height: 50px;
 }

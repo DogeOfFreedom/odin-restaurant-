@@ -13,9 +13,9 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.mp4|.png$/i,
+        test: /\.(mp4|png|otf|ttf)$/i,
         type: "asset/resource"
-      }]
+      }]  
     },
     plugins: [
       new HtmlWebpackPlugin({

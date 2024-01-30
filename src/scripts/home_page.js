@@ -1,5 +1,4 @@
-import bgVideo from "../videos/Italian Food Stock Footage.mp4"
-import { createContactPage } from "./contact_page";
+import bgVideo from "../videos/Italian Food Stock Footage.mp4";
 import { createMenuPage } from "./menu_page";
 
 let createHomePage = () => {
@@ -15,11 +14,10 @@ let createHomePage = () => {
             <h3 class="title-sub-text">Italian Cuisine at its finest</h3>
             <div class="video-bg-btn-container">
                 <button class="menu_btn video-bg-btn">Menu</button>
-                <button class="contact_btn video-bg-btn">Contact</button>
             </div>
         </div>    
         <div class="home-page-content-container">
-            <div class="about-us-container">
+            <div class="text-container">
                 <p>
                     Sofia's Alley has been serving up the finest Italian cuisine since 1952. The name "Sofia's Alley" pays homage to
                     the owner Sofia's original street side restaraunt she operated in Italy. "Sophia Sophia, when are you opening your door?
@@ -65,6 +63,25 @@ let createHomePage = () => {
                         <tr>
                             <td>Sunday</td>
                             <td>Closed</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="contact-container">
+                    <h2>Contact Us</h2>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="images/logos/instagram.png" class="small-icon" alt="">
+                            </td>
+                            <td>@sophias_alley_restaurant</td>
+                        </tr>
+                        <tr>
+                            <td>Phone:</td>
+                            <td>561-973-111</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>Sophias_Alley@funkmail.com</td>
                         </tr>
                     </table>
                 </div>
