@@ -6,7 +6,4 @@ import "../fonts/LUMINA.otf";
 let home_btn = document.querySelector(".home_btn")
 home_btn.addEventListener("click", createHomePage);
 
-// createHomePage();
-
-import { createMenuPage } from "./menu_page.js";
-createMenuPage();
+createHomePage();
